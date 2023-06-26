@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinha</title>
+</head>
+<body>
+    <script>
+         function pulaLinha(){
+            document.write("<br><br>");
+        }
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function sorteia(n){
+            return  Math.round(Math.random() * n)
+        }
+
+        var numeroPensado = sorteia(100);
+
+        console.log(numeroPensado);
+
+        var adivinha = alert("Adivinhe o número");
+        var chute = parseInt(prompt("Digite um número entre 1 e 100!"));
+        var tentativas = 1;
+        while(numeroPensado != chute && tentativas <= 4){
+            
+            if(chute > numeroPensado){
+                chute = prompt("Tente novamente! O número pensado era menor");
+                tentativas++;
+            }
+            if(chute < numeroPensado){
+                chute = prompt("Tente novamente! O número pensado era maior");
+                tentativas++
+        }
+        } 
+        
+        if(chute == numeroPensado){
+            mostra("Parabéns você acertou!!")
+        }
+        else{
+            mostra("Acabou as tentativas! O número pensado era: " + numeroPensado);
+        }
+       
+    
+    </script>
+</body>
+</html>
