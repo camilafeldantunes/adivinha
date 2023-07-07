@@ -34,12 +34,12 @@
             }
             if(chute < numeroPensado){
                 chute = prompt("Tente novamente! O número pensado era maior");
-                tentativas++
+                tentativas++;
         }
         } 
         
         if(chute == numeroPensado){
-            mostra("Parabéns você acertou!!")
+            mostra("Parabéns você acertou na tentativa " + tentativas);
         }
         else{
             mostra("Acabou as tentativas! O número pensado era: " + numeroPensado);
